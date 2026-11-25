@@ -117,6 +117,8 @@ if (fs.existsSync(frontendDistPath)) {
   });
 }
 
+export default app;
+
 const start = async () => {
   await connectDB();
   await ensureSuperAdmin();
@@ -138,4 +140,9 @@ const start = async () => {
   });
 };
 
-start();
+const isDirectExecution =
+  process.argv[1] && path.resolve(process.argv[1]) === __filename;
+
+if (isDirectExecution) {
+  start();
+}
