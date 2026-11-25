@@ -1,5 +1,5 @@
 export const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL ?? "/api";
+  import.meta.env.API_BASE_URL ?? "/api";
 
 export const USER_API_ENDPOINT = `${API_BASE_URL}/user`;
 export const JOB_API_ENDPOINT = `${API_BASE_URL}/job`;
